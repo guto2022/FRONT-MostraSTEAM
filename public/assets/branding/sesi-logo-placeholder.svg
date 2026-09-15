@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <rect x="0" y="10" width="40" height="40" rx="6" fill="#164192"/>
+  <rect x="30" y="38" width="12" height="12" rx="2" fill="#65B12E"/>
+  <text x="50" y="38" font-family="sans-serif" font-size="26" font-weight="800" fill="#164192">SESI</text>
+</svg>
