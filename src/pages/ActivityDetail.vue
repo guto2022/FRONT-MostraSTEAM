@@ -33,7 +33,7 @@ function openMapPreview(roomCode: string) {
 }
 function goToFullRoomPage(roomId: string) {
   sheetOpen.value = false
-  router.push({ name: 'room-detail', params: { id: roomId } })
+  router.push(`/rooms/${roomId}`) //  Substituído por string direta
 }
 </script>
 
@@ -111,7 +111,7 @@ function goToFullRoomPage(roomId: string) {
 
   <div v-else class="max-w-3xl mx-auto px-4 sm:px-6 pt-10">
     <EmptyState icon="search" title="Atividade não encontrada" description="Ela pode ter sido removida ou o link está incorreto.">
-      <template #action><AppButton as="router-link" :to="{ name: 'activities' }" variant="outline">Ver todas as atividades</AppButton></template>
+      <template #action><AppButton as="router-link" to="/activities" variant="outline">Ver todas as atividades</AppButton></template>
     </EmptyState>
   </div>
 </template>

@@ -71,7 +71,7 @@ const sheetOpen = ref(false)
 
   <div v-else class="max-w-3xl mx-auto px-4 sm:px-6 pt-10">
     <EmptyState icon="search" title="Sala não encontrada" description="Ela pode ter sido removida ou o link está incorreto.">
-      <template #action><AppButton as="router-link" :to="{ name: 'rooms' }" variant="outline">Ver todas as salas</AppButton></template>
+      <template #action><AppButton as="router-link" to="/rooms" variant="outline">Ver todas as salas</AppButton></template>
     </EmptyState>
   </div>
 </template>

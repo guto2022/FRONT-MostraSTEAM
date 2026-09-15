@@ -7,9 +7,9 @@ import SectionHeader from '@/components/ui/SectionHeader.vue'
 const featured = getFeaturedActivities()
 
 const shortcuts = [
-  { to: { name: 'map' }, label: 'Mapa', icon: 'map' },
-  { to: { name: 'activities' }, label: 'Atividades', icon: 'grid' },
-  { to: { name: 'rooms' }, label: 'Salas', icon: 'building' },
+  { to: '/map', label: 'Mapa', icon: 'map' },
+  { to: '/activities', label: 'Atividades', icon: 'grid' },
+  { to: '/rooms', label: 'Salas', icon: 'building' },
 ]
 </script>
 
@@ -23,7 +23,7 @@ const shortcuts = [
           Seu guia digital para explorar a Mostra: descubra atividades, encontre onde fica cada
           sala e circule pela escola com autonomia — mesmo que seja sua primeira visita.
         </p>
-        <AppButton as="router-link" :to="{ name: 'activities' }" variant="secondary" size="lg" class="mt-6">
+        <AppButton as="router-link" to="/activities" variant="secondary" size="lg" class="mt-6">
           Explorar a Mostra
           <template #icon-right><AppIcon name="chevron-right" :size="18" /></template>
         </AppButton>
@@ -47,7 +47,7 @@ const shortcuts = [
       </section>
 
       <section class="pt-9">
-        <SectionHeader title="Atividades em destaque" action-label="Ver todas" :action-to="{ name: 'activities' }" />
+        <SectionHeader title="Atividades em destaque" action-label="Ver todas" action-to="/activities" />
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <ActivityCard v-for="activity in featured" :key="activity.id" :activity="activity" />
         </div>
